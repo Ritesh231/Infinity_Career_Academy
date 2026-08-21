@@ -28,8 +28,12 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#C8941A] to-[#E05F00] flex items-center justify-center shadow-md shadow-[#E05F00]/25 group-hover:scale-110 transition-transform">
-              <span className="text-white font-black text-lg">∞</span>
+            <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center shadow-md shadow-[#E05F00]/25 group-hover:scale-110 transition-transform border border-[#C8941A]/20 bg-white">
+              <img
+                src="/InfinityAcademyLogo.jpeg"
+                alt="Infinity Career Academy Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <div className="font-black text-[#1A2B6B] text-lg tracking-wider leading-none">INFINITY</div>

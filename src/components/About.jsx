@@ -1,4 +1,3 @@
-import majorImg from '../assets/major_arun.png';
 
 const values = [
   { icon: '🎯', title: 'Expert Guidance', mr: 'तज्ञ मार्गदर्शन', desc: 'Led by a retired Army Major with hands-on defence experience.' },
@@ -27,14 +26,14 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Image side */}
           <div className="relative group">
-            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-[#C8941A] to-[#E05F00] blur-sm opacity-25 group-hover:opacity-40 transition-opacity" />
+            <div className="absolute -inset-1 rounded-3xl bg-white blur-sm opacity-50 group-hover:opacity-40 transition-opacity" />
             <div className="relative rounded-3xl overflow-hidden border border-[#E0D5C0] shadow-xl">
               <img
-                src={majorImg}
+                src="/InfinityAcademyOwner.png"
                 alt="Major Arun Suroshe guiding students at Infinity Career Academy"
-                className="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-80 sm:h-96 object-contain group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white/95 via-white/70 to-transparent p-6">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-200/95 via-white/70 to-transparent p-6">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-tr from-[#C8941A] to-[#E05F00] flex items-center justify-center text-xl flex-shrink-0">
                     🎖️

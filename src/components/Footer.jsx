@@ -1,13 +1,17 @@
 export default function Footer() {
   return (
-    <footer className="relative py-12 bg-[#030710] border-t border-white/10">
+    <footer className="relative py-12 bg-black border-t border-white/10">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#D4AF37] to-[#FF6F00] flex items-center justify-center shadow-md">
-              <span className="text-[#070C1E] font-black text-base">∞</span>
+            <div className="w-9 h-9 rounded-full overflow-hidden flex items-center justify-center shadow-md border border-white/10 bg-white">
+              <img
+                src="/InfinityAcademyLogo.jpeg"
+                alt="Infinity Career Academy Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <div className="font-black text-white text-base tracking-wider leading-none">INFINITY CAREER ACADEMY</div>
@@ -16,7 +20,7 @@ export default function Footer() {
           </div>
 
           {/* Address */}
-          <div className="text-center text-slate-500 text-xs leading-relaxed">
+          <div className="text-center text-white text-xs leading-relaxed">
             In front of Starlight, Bajajnagar, Waluj MIDC<br />
             Chh. Sambhajinagar, Maharashtra — 431136
           </div>
