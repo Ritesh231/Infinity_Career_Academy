@@ -19,10 +19,15 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-      ? 'py-3 bg-white/20 backdrop-blur-md border-b border-[#E0D5C0] shadow-md shadow-[#1A2B6B]/8'
-      : 'py-5 bg-white/80 backdrop-blur-sm border-b border-transparent'
-      }`}>
+<nav
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    isOpen
+      ? 'py-3 bg-white border-b border-transparent'
+      : isScrolled
+        ? 'py-3 bg-white/20 backdrop-blur-md border-b border-[#E0D5C0] shadow-md shadow-[#1A2B6B]/8'
+        : 'py-5 bg-white/80 backdrop-blur-sm border-b border-transparent'
+  }`}
+>
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
 
@@ -72,28 +77,67 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`md:hidden fixed inset-0 z-40 bg-white/97 backdrop-blur-xl flex flex-col items-center justify-center gap-10 transition-all duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}>
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute top-6 right-6 text-[#1A2B6B] hover:text-[#C8941A]"
-          aria-label="Close menu">
-          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        {navItems.map(item => (
-          <a key={item.label} href={item.href} onClick={() => setIsOpen(false)} className="text-center group">
-            <div className="text-2xl font-black text-[#1A2B6B] group-hover:text-[#C8941A] transition-colors">{item.label}</div>
-            <div className="text-sm text-[#E05F00] font-semibold mt-1">{item.mr}</div>
-          </a>
-        ))}
-        <a href="https://clpamy.page.link/YPQc" target="_blank" rel="noreferrer" onClick={() => setIsOpen(false)}
-          className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#1A2B6B] to-[#2D3F8A] text-white font-extrabold text-base shadow-xl">
-          Online Tests / ऑनलाईन टेस्ट
-        </a>
-      </div>
+
+     {/* Mobile Menu */}
+<div
+  className={`md:hidden fixed inset-0 z-[100] bg-white flex flex-col items-center overflow-y-auto transition-all duration-30 ${
+    isOpen
+      ? 'opacity-100 pointer-events-auto'
+      : 'opacity-0 pointer-events-none'
+  }`}
+>
+  {/* Close Button */}
+  <button
+    onClick={() => setIsOpen(false)}
+    className="absolute top-6 right-6 z-[110] p-2 text-[#1A2B6B] hover:text-[#C8941A]"
+    aria-label="Close menu"
+  >
+    <svg
+      className="w-7 h-7"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M6 18L18 6M6 6l12 12"
+      />
+    </svg>
+  </button>
+
+  {/* Menu Items */}
+  <div className="flex flex-col items-center gap-6 pt-24 pb-10">
+    {navItems.map((item) => (
+      <a
+        key={item.label}
+        href={item.href}
+        onClick={() => setIsOpen(false)}
+        className="text-center group"
+      >
+        <div className="text-2xl font-black text-[#1A2B6B] group-hover:text-[#C8941A] transition-colors">
+          {item.label}
+        </div>
+
+        <div className="text-sm text-[#E05F00] font-semibold mt-1">
+          {item.mr}
+        </div>
+      </a>
+    ))}
+
+    {/* Online Tests */}
+    <a
+      href="https://clpamy.page.link/YPQc"
+      target="_blank"
+      rel="noreferrer"
+      onClick={() => setIsOpen(false)}
+      className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#1A2B6B] to-[#2D3F8A] text-white font-extrabold text-base shadow-xl mt-2"
+    >
+      Online Tests / ऑनलाईन टेस्ट
+    </a>
+  </div>
+</div>
     </nav>
   );
 }
