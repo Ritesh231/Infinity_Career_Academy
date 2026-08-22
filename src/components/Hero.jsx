@@ -45,10 +45,10 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <a href="#contact"
+          <a href="https://clpamy.page.link/YPQc" target="_blank" rel="noreferrer"
             id="hero-enroll-btn"
             className="px-8 py-4 rounded-full bg-gradient-to-r from-[#C8941A] to-[#E05F00] text-white font-extrabold text-base hover:shadow-xl hover:shadow-[#E05F00]/30 hover:scale-105 active:scale-95 transition-all duration-300 w-full sm:w-auto text-center">
-            🎯 Join Now / आता सामील व्हा
+            📝 Online Test Series / ऑनलाईन टेस्ट सिरीज
           </a>
           <a href="https://t.me/infinityacademy121212" target="_blank" rel="noreferrer"
             id="hero-telegram-btn"

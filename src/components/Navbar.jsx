@@ -50,9 +50,9 @@ export default function Navbar() {
                 <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-[#C8941A] group-hover:w-full transition-all duration-300" />
               </a>
             ))}
-            <a href="#contact"
+            <a href="https://clpamy.page.link/YPQc" target="_blank" rel="noreferrer"
               className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[#1A2B6B] to-[#2D3F8A] text-white font-bold text-sm hover:shadow-lg hover:shadow-[#1A2B6B]/30 hover:scale-105 active:scale-95 transition-all duration-300">
-              Enroll Now
+              Online Tests
             </a>
           </div>
 
@@ -89,9 +89,9 @@ export default function Navbar() {
             <div className="text-sm text-[#E05F00] font-semibold mt-1">{item.mr}</div>
           </a>
         ))}
-        <a href="#contact" onClick={() => setIsOpen(false)}
+        <a href="https://clpamy.page.link/YPQc" target="_blank" rel="noreferrer" onClick={() => setIsOpen(false)}
           className="px-8 py-3.5 rounded-full bg-gradient-to-r from-[#1A2B6B] to-[#2D3F8A] text-white font-extrabold text-base shadow-xl">
-          Enroll Now / प्रवेश घ्या
+          Online Tests / ऑनलाईन टेस्ट
         </a>
       </div>
     </nav>
